@@ -1,0 +1,19 @@
+{
+  "_note": "EXAMPLE DATA. Invented, illustrative numbers for the fictional 'Example Co.'. Not real statistics.",
+  "title": "EXAMPLE CO. ORDERS Q3",
+  "kicker": "EXAMPLE DATA · ILLUSTRATIVE NUMBERS",
+  "hero_label": "ORDERS SHIPPED WORLDWIDE",
+  "subtitle": "Orders across three example product lines in one quarter",
+  "total": 450000,
+  "yoy": 6.2,
+  "yoy_label": "VS LAST YEAR",
+  "brand_heading": "BY PRODUCT LINE",
+  "seg_a_label": "LINE A", "seg_a": 315000, "seg_a_pct": 70.0, "seg_a_yoy": 4.1,
+  "seg_b_label": "LINE B", "seg_b": 112500, "seg_b_pct": 25.0, "seg_b_yoy": 12.3,
+  "seg_c_label": "LINE C", "seg_c": 22500, "seg_c_pct": 5.0, "seg_c_yoy": -3.0,
+  "elec_heading": "SUBSCRIPTION SHARE",
+  "elec_pct": 30.0, "elec_units": 135000, "elec_label": "PLAN A + PLAN B",
+  "bev_pct": 20.0, "bev_units": 90000, "bev_label": "Plan A ",
+  "phev_pct": 10.0, "phev_label": "Plan B ",
+  "source": "EXAMPLE DATA · Example Co. (fictional) · All numbers are invented for illustration"
+}

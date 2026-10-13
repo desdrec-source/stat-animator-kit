@@ -1,0 +1,5 @@
+.venv/
+out/
+fonts/*.ttf
+fonts/*.part
+__pycache__/
