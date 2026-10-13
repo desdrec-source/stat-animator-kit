@@ -1,0 +1,29 @@
+{
+  "theme": {
+    "name": "dark_stat_card",
+    "description": "S01 Dark Stat Card: charcoal card, condensed headline, one vivid accent, counting numbers (the original statanim look, extracted).",
+    "colors": {
+      "bg": "#111317", "surface": "#1C1F24", "text": "#FFFFFF", "sub": "#CDD0D5", "muted": "#B4B8BF", "dim": "#7E838B",
+      "accent": "#3DDC84", "highlight": "#FFD21F", "secondary": "#5D636C", "track": "#1C1F24", "notcap": "#2E323A",
+      "grid": "#FFFFFF14", "border": "#2E323A", "shadow": "#000000",
+      "series": ["#3DDC84", "#5D636C", "#2E323A", "#FFD21F"]
+    },
+    "fonts": {
+      "headline": "Anton-Regular.ttf", "body": "Inter-Regular.ttf", "medium": "Inter-Medium.ttf",
+      "semibold": "Inter-SemiBold.ttf", "bold": "Inter-Bold.ttf", "black": "Inter-ExtraBold.ttf", "number": "Inter-Bold.ttf"
+    },
+    "type": {
+      "headline": {"font": "headline", "color": "highlight", "line_height": 1.04},
+      "body": {"font": "body", "color": "sub", "line_height": 1.3},
+      "label": {"font": "body", "color": "muted"},
+      "source": {"font": "body", "size": 24, "color": "dim", "line_height": 1.35}
+    },
+    "background": {"type": "solid", "color": "bg", "vignette": 0.35},
+    "texture": {"type": "none"},
+    "post": {},
+    "shape": {"corner_radius": 12, "bar_radius": 4, "stroke_width": 0, "shadow": {"type": "none"}},
+    "motion": {"ease": "out_cubic", "ease_count": "out_cubic", "ease_emphasis": "out_back",
+               "enter": "fade", "enter_dur": 0.6, "enter_offset": 30, "time_step": 0},
+    "numbers": {"count_mode": "ease", "tabular": "auto", "thousands_sep": ",", "decimal_sep": "."}
+  }
+}

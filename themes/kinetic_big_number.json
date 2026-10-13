@@ -1,0 +1,32 @@
+{
+  "theme": {
+    "name": "kinetic_big_number",
+    "description": "S09 Kinetic Big Number: one giant condensed number rolls in (odometer), captions punch in word by word, sound-off friendly.",
+    "colors": {
+      "bg": "#0A0A0A", "bg2": "#1B1B1B", "text": "#FFFFFF", "accent": "#FFE600", "accent2": "#FF3B5C",
+      "muted": "#A3A9AF", "dim": "#7A8087", "track": "#202224", "secondary": "#4A4F55", "notcap": "#2A2C2F",
+      "grid": "#FFFFFF14", "border": "#FFFFFF", "shadow": "#000000",
+      "series": ["#FFE600", "#FF3B5C", "#2A2C2F"]
+    },
+    "fonts": {
+      "display": "Anton-Regular.ttf", "caption": "Inter-ExtraBold.ttf", "body": "Inter-Medium.ttf",
+      "bold": "Inter-Bold.ttf", "small": "Inter-Regular.ttf"
+    },
+    "type": {
+      "display": {"font": "display", "color": "text"},
+      "caption": {"font": "caption", "color": "text", "case": "upper", "line_height": 1.15},
+      "label": {"font": "caption", "color": "muted", "case": "upper"},
+      "source": {"font": "small", "size": 22, "color": "dim", "line_height": 1.35}
+    },
+    "background": {"type": "radial", "gradient": {"stops": [["bg2", 0], ["bg", 1]], "center": [0.5, 0.35], "radius": 0.9},
+                   "vignette": 0.2},
+    "texture": {"type": "none"},
+    "post": {"grain": {"amount": 0.03, "animated": true, "fps": 12, "size": 1.0}},
+    "shape": {"corner_radius": 0, "bar_radius": 0, "stroke_width": 0, "shadow": {"type": "none"}},
+    "motion": {"ease": "out_expo", "ease_enter": "out_expo", "ease_count": "out_quint", "ease_emphasis": "out_back",
+               "back_overshoot": 1.8, "enter": "pop", "enter_scale": 1.15, "enter_dur": 0.32, "enter_offset": 40,
+               "time_step": 0},
+    "numbers": {"count_mode": "odometer", "tabular": "auto",
+                "final_flash": {"color": "accent", "text_color": "bg", "dur": 0.1}}
+  }
+}

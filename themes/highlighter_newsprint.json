@@ -1,0 +1,136 @@
+{
+  "theme": {
+    "name": "highlighter_newsprint",
+    "description": "S04 Highlighter Newsprint: muted newsprint paper, serif headline, one yellow highlighter swipe and one red marker loop, choppy 12 fps step-time, film grain and a slow push-in.",
+    "colors": {
+      "bg": "#EFE9DD",
+      "newsgrey": "#CFC8BA",
+      "surface": "#E4DDCF",
+      "text": "#222222",
+      "muted": "#4F4A42",
+      "dim": "#5E584E",
+      "highlighter": "#FFE14D",
+      "marker": "#D7263D",
+      "blue": "#3F5E7A",
+      "accent": "#D7263D",
+      "track": "#E2DBCD",
+      "notcap": "#CFC8BA",
+      "grid": "#22222222",
+      "border": "#222222",
+      "shadow": "#00000030",
+      "series": [
+        "#D7263D",
+        "#3F5E7A",
+        "#CFC8BA"
+      ]
+    },
+    "fonts": {
+      "headline": "PlayfairDisplay[wght].ttf:wght=900",
+      "serif": "PlayfairDisplay[wght].ttf:wght=700",
+      "italic": "PlayfairDisplay-Italic[wght].ttf:wght=500",
+      "body": "LibreFranklin[wght].ttf:wght=500",
+      "body_bold": "LibreFranklin[wght].ttf:wght=700",
+      "kinetic": "BarlowCondensed-ExtraBold.ttf"
+    },
+    "type": {
+      "headline": {
+        "font": "headline",
+        "color": "text",
+        "line_height": 1.05
+      },
+      "body": {
+        "font": "italic",
+        "color": "muted",
+        "line_height": 1.3
+      },
+      "label": {
+        "font": "body_bold",
+        "color": "text",
+        "case": "upper"
+      },
+      "source": {
+        "font": "body",
+        "size": 22,
+        "color": "dim",
+        "line_height": 1.35
+      }
+    },
+    "background": {
+      "type": "solid",
+      "color": "bg",
+      "vignette": 0.28
+    },
+    "texture": {
+      "type": "newsprint",
+      "strength": 0.07,
+      "scale": 1.0,
+      "seed": 9
+    },
+    "post": {
+      "grain": {
+        "amount": 0.05,
+        "animated": true,
+        "fps": 12,
+        "size": 1.5
+      },
+      "camera": {
+        "push": [
+          1.0,
+          1.035
+        ],
+        "ease": "in_out_sine"
+      }
+    },
+    "shape": {
+      "corner_radius": 0,
+      "bar_radius": 0,
+      "stroke_width": 3,
+      "stroke_color": "border",
+      "shadow": {
+        "type": "soft",
+        "dx": 6,
+        "dy": 8,
+        "blur": 10,
+        "color": "shadow",
+        "opacity": 1.0
+      }
+    },
+    "motion": {
+      "ease": "out_cubic",
+      "ease_enter": "out_cubic",
+      "ease_count": "out_cubic",
+      "ease_emphasis": "out_back",
+      "enter": "slide_up",
+      "enter_dur": 0.5,
+      "enter_offset": 24,
+      "time_step": 12
+    },
+    "numbers": {
+      "count_mode": "ease",
+      "tabular": "auto",
+      "features": [
+        "lnum"
+      ]
+    },
+    "annotations": {
+      "highlighter": {
+        "color": "highlighter",
+        "opacity": 0.9,
+        "blend": "multiply",
+        "rough_edge": true,
+        "pad": [
+          22,
+          6
+        ]
+      },
+      "marker_circle": {
+        "color": "marker",
+        "width": 7,
+        "pad": [
+          30,
+          22
+        ]
+      }
+    }
+  }
+}

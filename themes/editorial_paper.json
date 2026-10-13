@@ -1,0 +1,33 @@
+{
+  "theme": {
+    "name": "editorial_paper",
+    "description": "S02 Editorial Paper: warm paper, serif headline, ink rule, hairline grid, muted palette with one red highlight series, source bottom-left.",
+    "colors": {
+      "bg": "#F7F2EA", "surface": "#FFFFFF", "text": "#1A1A1A", "muted": "#5E5E5E", "dim": "#6F6A60",
+      "highlight": "#C8102E", "accent": "#1F5A8C", "accent_light": "#7FB2D9", "teal": "#2E8B85",
+      "grid": "#D9D3C7", "track": "#ECE5D8", "notcap": "#CFC6B6", "border": "#1A1A1A", "shadow": "#00000022",
+      "series": ["#C8102E", "#1F5A8C", "#7FB2D9", "#2E8B85"]
+    },
+    "fonts": {
+      "headline": "SourceSerif4[opsz,wght].ttf:wght=700,opsz=60",
+      "serif": "SourceSerif4[opsz,wght].ttf:wght=600,opsz=60",
+      "body": "LibreFranklin[wght].ttf:wght=400",
+      "body_medium": "LibreFranklin[wght].ttf:wght=500",
+      "body_bold": "LibreFranklin[wght].ttf:wght=700",
+      "number": "LibreFranklin[wght].ttf:wght=700"
+    },
+    "type": {
+      "headline": {"font": "headline", "color": "text", "line_height": 1.08},
+      "body": {"font": "body", "color": "muted", "line_height": 1.3},
+      "label": {"font": "body_medium", "color": "text"},
+      "source": {"font": "body", "size": 22, "color": "dim", "line_height": 1.35}
+    },
+    "background": {"type": "solid", "color": "bg", "vignette": 0.0},
+    "texture": {"type": "paper", "strength": 0.025, "scale": 1.0, "seed": 7},
+    "post": {},
+    "shape": {"corner_radius": 0, "bar_radius": 0, "stroke_width": 0, "shadow": {"type": "none"}},
+    "motion": {"ease": "in_out_cubic", "ease_enter": "out_cubic", "ease_count": "in_out_cubic", "ease_emphasis": "out_back",
+               "enter": "slide_up", "enter_dur": 0.7, "enter_offset": 16, "time_step": 0},
+    "numbers": {"count_mode": "ease", "tabular": "auto"}
+  }
+}
