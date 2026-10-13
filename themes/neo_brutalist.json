@@ -1,0 +1,33 @@
+{
+  "theme": {
+    "name": "neo_brutalist",
+    "description": "S10 Neo-Brutalist Block: cream page, flat saturated blocks, thick black outlines, hard offset shadows, snappy stepped motion.",
+    "colors": {
+      "bg": "#FFF4D6", "surface": "#FFFFFF", "text": "#111111", "muted": "#3A3A3A", "dim": "#4F4A3E",
+      "accent": "#FFD23F", "accent2": "#3A86FF", "accent3": "#FF6B9A", "positive": "#3BCE76",
+      "track": "#FFFFFF", "notcap": "#FFFFFF", "grid": "#1111112E", "border": "#111111", "shadow": "#111111",
+      "series": ["#FF6B9A", "#3A86FF", "#FFFFFF", "#FFD23F"]
+    },
+    "fonts": {
+      "headline": "ArchivoBlack-Regular.ttf",
+      "body": "SpaceGrotesk[wght].ttf:wght=500",
+      "body_bold": "SpaceGrotesk[wght].ttf:wght=700",
+      "number": "SpaceGrotesk[wght].ttf:wght=700"
+    },
+    "type": {
+      "headline": {"font": "headline", "color": "text", "line_height": 1.0, "case": "upper"},
+      "body": {"font": "body", "color": "text", "line_height": 1.25},
+      "label": {"font": "body_bold", "color": "text", "case": "upper"},
+      "source": {"font": "body", "size": 22, "color": "dim", "line_height": 1.3}
+    },
+    "background": {"type": "solid", "color": "bg", "vignette": 0.0,
+                   "pattern": {"type": "dots", "spacing": 36, "dot_r": 2, "color": "grid"}},
+    "texture": {"type": "noise", "strength": 0.025, "seed": 4},
+    "post": {},
+    "shape": {"corner_radius": 10, "bar_radius": 0, "stroke_width": 5, "stroke_color": "border",
+              "shadow": {"type": "hard", "dx": 12, "dy": 12, "color": "shadow", "opacity": 1.0}},
+    "motion": {"ease": "out_expo", "ease_enter": "out_expo", "ease_count": "out_expo", "ease_emphasis": "out_back",
+               "back_overshoot": 1.25, "enter": "slam_up", "enter_dur": 0.35, "enter_offset": 140, "time_step": 0},
+    "numbers": {"count_mode": "steps", "count_steps": 8, "tabular": "auto"}
+  }
+}

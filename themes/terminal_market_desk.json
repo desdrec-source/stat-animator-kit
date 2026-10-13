@@ -1,0 +1,35 @@
+{
+  "theme": {
+    "name": "terminal_market_desk",
+    "description": "S03 Terminal, Market Desk variant: near-black screen, hairline grid, monospaced tabular numbers, teal/red deltas, gold used only for small tags, fast linear motion with value flashes.",
+    "colors": {
+      "bg": "#07090C", "surface": "#0E1217", "grid": "#1E252E", "label": "#F2B544",
+      "up": "#26D7A6", "down": "#FF5A5F", "up_alt": "#3D8BFF", "text": "#E6E8EB", "muted": "#8A939E", "dim": "#6C7580",
+      "accent": "#26D7A6", "track": "#151A21", "notcap": "#2A323C", "border": "#232B35", "shadow": "#000000",
+      "series": ["#26D7A6", "#FF5A5F", "#2A323C", "#3D8BFF"]
+    },
+    "fonts": {
+      "headline": "IBMPlexSansCondensed-SemiBold.ttf",
+      "mono": "JetBrainsMono[wght].ttf:wght=400",
+      "mono_medium": "JetBrainsMono[wght].ttf:wght=500",
+      "mono_bold": "JetBrainsMono[wght].ttf:wght=700",
+      "body": "JetBrainsMono[wght].ttf:wght=400",
+      "number": "JetBrainsMono[wght].ttf:wght=700"
+    },
+    "type": {
+      "headline": {"font": "headline", "color": "text", "line_height": 1.05},
+      "body": {"font": "mono", "color": "muted", "line_height": 1.35},
+      "label": {"font": "mono_medium", "color": "label", "case": "upper"},
+      "source": {"font": "mono", "size": 21, "color": "dim", "line_height": 1.45}
+    },
+    "background": {"type": "solid", "color": "bg", "vignette": 0.15,
+                   "pattern": {"type": "grid", "spacing": 40, "width": 1, "color": "grid", "opacity": 0.45}},
+    "texture": {"type": "none"},
+    "post": {},
+    "shape": {"corner_radius": 2, "bar_radius": 0, "stroke_width": 1, "stroke_color": "border", "shadow": {"type": "none"}},
+    "motion": {"ease": "out_quad", "ease_enter": "out_quad", "ease_count": "linear", "ease_emphasis": "out_quad",
+               "enter": "fade", "enter_dur": 0.25, "enter_offset": 0, "time_step": 0},
+    "numbers": {"count_mode": "linear", "tabular": "auto",
+                "final_flash": {"color": "up", "text_color": "bg", "dur": 0.15}}
+  }
+}
