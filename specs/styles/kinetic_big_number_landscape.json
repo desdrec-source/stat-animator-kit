@@ -1,0 +1,539 @@
+{
+ "data_file": "../example_data_landscape.json",
+ "theme": "kinetic_big_number",
+ "canvas": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "hold": 2.5
+ },
+ "colors": {
+  "phev": "#9C8C1E",
+  "seg_c": "#E8E8E8",
+  "divider": "#FFFFFF26"
+ },
+ "background": {
+  "gradient": {
+   "center": [
+    0.3,
+    0.45
+   ],
+   "radius": 0.85
+  }
+ },
+ "elements": [
+  {
+   "id": "title",
+   "type": "text",
+   "role": "caption",
+   "text": "$title",
+   "size": 58,
+   "color": "accent",
+   "x": 110,
+   "y": 140,
+   "anchor": "ls",
+   "max_width": 1700,
+   "start": 0.0
+  },
+  {
+   "id": "kicker",
+   "type": "text",
+   "role": "label",
+   "text": "$kicker",
+   "size": 26,
+   "x": 112,
+   "y": 190,
+   "anchor": "ls",
+   "start": 0.2,
+   "enter": "fade",
+   "enter_dur": 0.4
+  },
+  {
+   "id": "hero",
+   "type": "line",
+   "x": 100,
+   "y": 560,
+   "align": "left",
+   "role": "display",
+   "size": 300,
+   "color": "text",
+   "runs": [
+    {
+     "value": "$total",
+     "flash": {
+      "color": "accent",
+      "text_color": "bg",
+      "dur": 0.12,
+      "pad": [
+       16,
+       26
+      ]
+     }
+    }
+   ],
+   "start": 0.5,
+   "dur": 2.2,
+   "enter_dur": 0.35
+  },
+  {
+   "id": "hero_label",
+   "type": "text",
+   "role": "caption",
+   "text": "$hero_label",
+   "size": 50,
+   "color": "accent",
+   "x": 110,
+   "y": 650,
+   "anchor": "ls",
+   "start": 2.85
+  },
+  {
+   "id": "yoy",
+   "type": "line",
+   "x": 104,
+   "y": 800,
+   "align": "left",
+   "role": "display",
+   "size": 112,
+   "color": "accent2",
+   "suffix_scale": 0.55,
+   "suffix_align": "top",
+   "runs": [
+    {
+     "value": "$yoy",
+     "decimals": 1,
+     "suffix": "%"
+    },
+    {
+     "text": "   ",
+     "font": "caption",
+     "size": 40
+    },
+    {
+     "text": "$yoy_label",
+     "font": "caption",
+     "size": 40,
+     "color": "muted"
+    }
+   ],
+   "start": 3.0,
+   "dur": 1.0
+  },
+  {
+   "id": "caption",
+   "type": "text",
+   "role": "caption",
+   "text": "$subtitle",
+   "size": 36,
+   "x": 110,
+   "y": 885,
+   "anchor": "ls",
+   "wrap_width": 960,
+   "max_lines": 2,
+   "balance": true,
+   "word_stagger": 0.12,
+   "start": 3.3
+  },
+  {
+   "id": "divider",
+   "type": "rule",
+   "x0": 1130,
+   "y0": 250,
+   "x1": 1130,
+   "y1": 930,
+   "width": 2,
+   "color": "divider",
+   "start": 3.4,
+   "draw_dur": 0.6
+  },
+  {
+   "id": "brand_heading",
+   "type": "text",
+   "role": "label",
+   "text": "$brand_heading",
+   "size": 30,
+   "x": 1200,
+   "y": 290,
+   "anchor": "ls",
+   "start": 3.7,
+   "enter": "fade",
+   "enter_dur": 0.3
+  },
+  {
+   "id": "bar",
+   "type": "bar",
+   "x": 1200,
+   "y": 318,
+   "w": 620,
+   "h": 60,
+   "gap": 4,
+   "gap_color": "bg",
+   "track": "track",
+   "segments": [
+    {
+     "value": "$seg_a",
+     "color": "accent"
+    },
+    {
+     "value": "$seg_b",
+     "color": "accent2"
+    },
+    {
+     "value": "$seg_c",
+     "color": "seg_c"
+    }
+   ],
+   "start": 3.8,
+   "dur": 1.6
+  },
+  {
+   "id": "seg_a_l",
+   "type": "line",
+   "x": 1200,
+   "y": 448,
+   "font": "caption",
+   "size": 32,
+   "color": "text",
+   "runs": [
+    {
+     "swatch": "accent",
+     "size": 24,
+     "gap": 14,
+     "radius": 0
+    },
+    {
+     "text": "$seg_a_label"
+    }
+   ],
+   "start": 3.8,
+   "enter": "fade",
+   "enter_dur": 0.3
+  },
+  {
+   "id": "seg_a_v",
+   "type": "line",
+   "x": 1690,
+   "y": 448,
+   "align": "right",
+   "font": "caption",
+   "size": 32,
+   "color": "text",
+   "runs": [
+    {
+     "value": "$seg_a",
+     "sync": "bar",
+     "seg": 0
+    }
+   ],
+   "start": 3.8,
+   "enter": "fade",
+   "enter_dur": 0.3
+  },
+  {
+   "id": "seg_a_p",
+   "type": "line",
+   "x": 1820,
+   "y": 448,
+   "align": "right",
+   "font": "body",
+   "size": 32,
+   "color": "muted",
+   "runs": [
+    {
+     "value": "$seg_a_pct",
+     "decimals": 1,
+     "suffix": "%",
+     "sync": "bar",
+     "seg": 0
+    }
+   ],
+   "start": 3.8,
+   "enter": "fade",
+   "enter_dur": 0.3
+  },
+  {
+   "id": "seg_b_l",
+   "type": "line",
+   "x": 1200,
+   "y": 508,
+   "font": "caption",
+   "size": 32,
+   "color": "text",
+   "runs": [
+    {
+     "swatch": "accent2",
+     "size": 24,
+     "gap": 14,
+     "radius": 0
+    },
+    {
+     "text": "$seg_b_label"
+    }
+   ],
+   "start": 3.9,
+   "enter": "fade",
+   "enter_dur": 0.3
+  },
+  {
+   "id": "seg_b_v",
+   "type": "line",
+   "x": 1690,
+   "y": 508,
+   "align": "right",
+   "font": "caption",
+   "size": 32,
+   "color": "text",
+   "runs": [
+    {
+     "value": "$seg_b",
+     "sync": "bar",
+     "seg": 1
+    }
+   ],
+   "start": 3.9,
+   "enter": "fade",
+   "enter_dur": 0.3
+  },
+  {
+   "id": "seg_b_p",
+   "type": "line",
+   "x": 1820,
+   "y": 508,
+   "align": "right",
+   "font": "body",
+   "size": 32,
+   "color": "muted",
+   "runs": [
+    {
+     "value": "$seg_b_pct",
+     "decimals": 1,
+     "suffix": "%",
+     "sync": "bar",
+     "seg": 1
+    }
+   ],
+   "start": 3.9,
+   "enter": "fade",
+   "enter_dur": 0.3
+  },
+  {
+   "id": "seg_c_l",
+   "type": "line",
+   "x": 1200,
+   "y": 568,
+   "font": "caption",
+   "size": 32,
+   "color": "text",
+   "runs": [
+    {
+     "swatch": "seg_c",
+     "size": 24,
+     "gap": 14,
+     "radius": 0
+    },
+    {
+     "text": "$seg_c_label"
+    }
+   ],
+   "start": 4.0,
+   "enter": "fade",
+   "enter_dur": 0.3
+  },
+  {
+   "id": "seg_c_v",
+   "type": "line",
+   "x": 1690,
+   "y": 568,
+   "align": "right",
+   "font": "caption",
+   "size": 32,
+   "color": "text",
+   "runs": [
+    {
+     "value": "$seg_c",
+     "sync": "bar",
+     "seg": 2
+    }
+   ],
+   "start": 4.0,
+   "enter": "fade",
+   "enter_dur": 0.3
+  },
+  {
+   "id": "seg_c_p",
+   "type": "line",
+   "x": 1820,
+   "y": 568,
+   "align": "right",
+   "font": "body",
+   "size": 32,
+   "color": "muted",
+   "runs": [
+    {
+     "value": "$seg_c_pct",
+     "decimals": 1,
+     "suffix": "%",
+     "sync": "bar",
+     "seg": 2
+    }
+   ],
+   "start": 4.0,
+   "enter": "fade",
+   "enter_dur": 0.3
+  },
+  {
+   "id": "elec_heading",
+   "type": "text",
+   "role": "label",
+   "text": "$elec_heading",
+   "size": 30,
+   "x": 1200,
+   "y": 680,
+   "anchor": "ls",
+   "start": 5.2,
+   "enter": "fade",
+   "enter_dur": 0.3
+  },
+  {
+   "id": "elec_num",
+   "type": "line",
+   "x": 1196,
+   "y": 820,
+   "align": "left",
+   "role": "display",
+   "size": 130,
+   "color": "accent",
+   "suffix_scale": 0.5,
+   "suffix_align": "top",
+   "runs": [
+    {
+     "value": "$elec_pct",
+     "decimals": 1,
+     "suffix": "%",
+     "sync": "ebar"
+    }
+   ],
+   "start": 5.3,
+   "enter_dur": 0.3
+  },
+  {
+   "id": "elec_lbl",
+   "type": "text",
+   "role": "caption",
+   "text": "$elec_label",
+   "size": 34,
+   "x": 1520,
+   "y": 760,
+   "anchor": "ls",
+   "start": 5.5
+  },
+  {
+   "id": "elec_units",
+   "type": "line",
+   "x": 1520,
+   "y": 812,
+   "font": "body",
+   "size": 28,
+   "color": "muted",
+   "runs": [
+    {
+     "value": "$elec_units",
+     "sync": "ebar"
+    },
+    {
+     "text": " subscribers"
+    }
+   ],
+   "start": 5.5,
+   "enter": "fade",
+   "enter_dur": 0.3
+  },
+  {
+   "id": "ebar",
+   "type": "bar",
+   "x": 1200,
+   "y": 852,
+   "w": 620,
+   "h": 26,
+   "gap": 3,
+   "gap_color": "bg",
+   "track": "track",
+   "total": 100,
+   "segments": [
+    {
+     "value": "$bev_pct",
+     "color": "accent"
+    },
+    {
+     "value": "$phev_pct",
+     "color": "phev"
+    }
+   ],
+   "start": 5.3,
+   "dur": 1.4
+  },
+  {
+   "id": "ebar_legend",
+   "type": "line",
+   "x": 1200,
+   "y": 922,
+   "font": "bold",
+   "size": 24,
+   "color": "muted",
+   "runs": [
+    {
+     "swatch": "accent",
+     "size": 18,
+     "gap": 10,
+     "radius": 0
+    },
+    {
+     "text": "$bev_label"
+    },
+    {
+     "value": "$bev_pct",
+     "decimals": 1,
+     "suffix": "%",
+     "sync": "ebar",
+     "seg": 0
+    },
+    {
+     "text": "      "
+    },
+    {
+     "swatch": "phev",
+     "size": 18,
+     "gap": 10,
+     "radius": 0
+    },
+    {
+     "text": "$phev_label"
+    },
+    {
+     "value": "$phev_pct",
+     "decimals": 1,
+     "suffix": "%",
+     "sync": "ebar",
+     "seg": 1
+    }
+   ],
+   "start": 5.3,
+   "enter": "fade",
+   "enter_dur": 0.3
+  },
+  {
+   "id": "source",
+   "type": "text",
+   "role": "source",
+   "text": "$source",
+   "size": 22,
+   "x": 960,
+   "y": 1030,
+   "anchor": "ms",
+   "max_width": 1760,
+   "start": 6.8,
+   "enter": "fade",
+   "enter_dur": 0.4
+  }
+ ]
+}

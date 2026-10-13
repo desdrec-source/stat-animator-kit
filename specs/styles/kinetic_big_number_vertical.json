@@ -1,0 +1,55 @@
+{
+  "data_file": "../example_data.json",
+  "theme": "kinetic_big_number",
+  "canvas": {"width": 1080, "height": 1920, "fps": 30, "hold": 2.0},
+  "elements": [
+    {"id": "title", "type": "text", "role": "caption", "text": "$title", "size": 46, "color": "accent",
+     "x": 540, "y": 170, "anchor": "ms", "max_width": 960, "start": 0.0},
+
+    {"id": "hero", "type": "line", "x": 540, "y": 640, "align": "center", "role": "display", "size": 420, "color": "text",
+     "suffix_scale": 0.5, "suffix_align": "top",
+     "runs": [{"value": "$donut_pct", "decimals": 1, "suffix": "%", "flash": true}],
+     "start": 0.4, "dur": 2.0, "enter_dur": 0.35},
+    {"id": "hero_label", "type": "text", "role": "caption", "text": "$donut_label", "size": 56, "color": "accent",
+     "x": 540, "y": 745, "anchor": "ms", "start": 2.45},
+    {"id": "caption", "type": "text", "role": "caption", "text": "$subtitle", "size": 50,
+     "x": 540, "y": 850, "anchor": "ms", "wrap_width": 960, "balance": true, "max_lines": 3,
+     "word_stagger": 0.17, "start": 2.7},
+
+    {"id": "using_num", "type": "line", "x": 290, "y": 1160, "align": "center", "role": "display", "size": 150, "color": "text",
+     "runs": [{"value": "$using"}], "start": 4.4, "dur": 1.4},
+    {"id": "using_lbl", "type": "text", "role": "label", "text": "$using_label", "size": 34,
+     "x": 290, "y": 1218, "anchor": "ms", "start": 4.6},
+    {"id": "capable_num", "type": "line", "x": 790, "y": 1160, "align": "center", "role": "display", "size": 150, "color": "muted",
+     "runs": [{"value": "$capable"}], "start": 4.6, "dur": 1.4},
+    {"id": "capable_lbl", "type": "text", "role": "label", "text": "$capable_label", "size": 34,
+     "x": 790, "y": 1218, "anchor": "ms", "max_width": 470, "start": 4.8},
+
+    {"id": "dist_num", "type": "line", "x": 540, "y": 1440, "align": "center", "role": "display", "size": 170, "color": "accent",
+     "suffix_scale": 0.42,
+     "runs": [{"value": "$distance", "suffix": "$distance_unit"}], "start": 5.6, "dur": 1.6},
+    {"id": "dist_lbl", "type": "text", "role": "label", "text": "$distance_label", "size": 34,
+     "x": 540, "y": 1500, "anchor": "ms", "start": 5.8},
+
+    {"id": "fleet_line", "type": "line", "x": 540, "y": 1590, "align": "center", "font": "body", "size": 30, "color": "muted",
+     "count_mode": "ease", "runs": [{"text": "$fleet_prefix"}, {"value": "$fleet"}, {"text": "$fleet_suffix"}],
+     "start": 6.6, "dur": 1.0, "enter": "fade", "enter_dur": 0.3},
+    {"id": "bar", "type": "bar", "x": 90, "y": 1614, "w": 900, "h": 30, "gap": 3, "track": "track",
+     "segments": [{"value": "$bar_using", "color": "accent"}, {"value": "$bar_notusing", "color": "accent2"},
+                  {"value": "$bar_notcapable", "color": "notcap"}],
+     "start": 6.7, "dur": 1.2},
+    {"id": "bar_legend", "type": "line", "x": 540, "y": 1686, "align": "center", "font": "bold", "size": 26, "color": "muted",
+     "runs": [{"swatch": "accent", "size": 20, "gap": 10, "radius": 0}, {"text": "$bar_using_label"},
+              {"value": "$bar_using", "decimals": 1, "suffix": "%", "sync": "bar", "seg": 0},
+              {"text": "     "}, {"swatch": "accent2", "size": 20, "gap": 10, "radius": 0}, {"text": "$bar_notusing_label"},
+              {"value": "$bar_notusing", "decimals": 1, "suffix": "%", "sync": "bar", "seg": 1},
+              {"text": "     "}, {"swatch": "notcap", "size": 20, "gap": 10, "radius": 0}, {"text": "$bar_notcapable_label"},
+              {"value": "$bar_notcapable", "decimals": 1, "suffix": "%", "sync": "bar", "seg": 2}],
+     "start": 6.7, "enter": "fade", "enter_dur": 0.3},
+
+    {"id": "source", "type": "text", "role": "source", "text": "$source",
+     "x": 540, "y": 1770, "anchor": "ms", "wrap_width": 980, "break_at": " · ", "start": 7.6, "enter": "fade", "enter_dur": 0.4},
+    {"id": "credit", "type": "text", "role": "source", "text": "$credit",
+     "x": 540, "y": 1878, "anchor": "ms", "start": 7.7, "enter": "fade", "enter_dur": 0.4}
+  ]
+}
